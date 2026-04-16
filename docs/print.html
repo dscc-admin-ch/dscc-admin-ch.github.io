@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html lang="fr" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>DSCC</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-3b2312d1.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-54b0fbfd.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">DSCC</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="centre-de-compétences-en-science-des-données"><a class="header" href="#centre-de-compétences-en-science-des-données">Centre de compétences en science des données</a></h1>
+<p>Prestataire faisant partie de l’administration fédérale, le Centre de compétences en science des données (DSCC) fournit des services en matière de science des données et intelligence artificielle (IA) et met son savoir-faire à la disposition de toutes les administrations publiques en Suisse (Confédération, cantons et communes). Dans le but d’apporter des compétences à la pointe du progrès, le centre de compétences met à profit les synergies existantes au sein d’un réseau interconnecté de partenaires universitaires et collabore étroitement avec le domaine recherche et développement du secteur public.</p>
+<p><img src="img/position.png" alt="">
+Positionnement du Centre de compétences en science des données (DSCC) au sein de l’écosystème public suisse de la science des données.</p>
+<h2 id="brève-définition-de-la-science-des-données"><a class="header" href="#brève-définition-de-la-science-des-données">Brève définition de la science des données</a></h2>
+<p>La science des données traite des ensembles de données pour en extraire des connaissances facilitant la prise de décisions. Elle couvre toutes les étapes du processus: formulation du problème, collecte, sélection, préparation et analyse des données, puis évaluation et interprétation des données, enfin communication et mise à disposition des résultats. Par conséquent, les processus de résolution de problèmes et d’amélioration continue constituent les pièces maîtresses de cette science. Conjointement, ces deux processus doivent permettre de résoudre des problèmes complexes, impliquant de grandes quantités de données dans un environnement non structuré, grâce à l’application rigoureuse de méthodes (apprentissage automatique, intelligence artificielle, etc.), de techniques et de pratiques novatrices.</p>
+<p><img src="img/processus.png" alt="">
+Recourant à une démarche d’amélioration continue, la science des données est un processus de résolution de problèmes rigoureux et documenté.</p>
+<h3 id="vision"><a class="header" href="#vision">Vision</a></h3>
+<p>Nous recourons à la science des données et développons des compétences pour le bien commun dans toute la Suisse (for public good).</p>
+<h3 id="mission"><a class="header" href="#mission">Mission</a></h3>
+<p>Nous travaillons à la frontière entre la science des données et l’intelligence artificielle. Nous développons des compétences et utilisons les méthodes, techniques et pratiques requises pour créer une nouvelle compréhension du domaine et pour faciliter la prise de décisions pour le bien de la collectivité (for public good).</p>
+<h3 id="valeurs-fondamentales"><a class="header" href="#valeurs-fondamentales">Valeurs fondamentales</a></h3>
+<p>Sécurité des informations, protection des données et de l’information, sécurité et gouvernance des données, non-discrimination, explicabilité, transparence, reproductibilité, neutralité, objectivité, traitement éthique des données et des résultats: telles sont les valeurs fondamentales qui nous caractérisent.</p>
+<p>Ces valeurs culminent dans la certitude des citoyens que tous les services de la science des données sont mis à profit dans l’intérêt général. Par exemple, les résultats de chaque projet sont documentés de manière transparente et mis à disposition, pour autant que la législation, en particulier celle sur la protection des données, le permette.</p>
+<p>Le Centre de compétences en science des données (DSCC) s’efforce de générer de la valeur pour le bien de la collectivité de manière durable.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="services"><a href="#services" class="header">Services</a></h1>
+<h2 id="science-des-données-en-tant-que-service"><a class="header" href="#science-des-données-en-tant-que-service">Science des données en tant que service</a></h2>
+<p>Le Centre de compétences en science des données (DSCC) propose aux unités de l’administration des prestations dans le domaine de la science des données selon le principe de la science des données en tant que service (Data Science as a Service, DSaaS). Dans le cadre de son mandat, selon lequel il incombe au DSCC de fournir des services d’intérêt public, son champ d’action s’étend exclusivement au secteur public, à savoir à la Confédération, aux cantons et aux communes.</p>
+<p><img src="img/service.png" alt=""></p>
+<h2 id="prestations-de-services-en-science-des-données-et-ia"><a class="header" href="#prestations-de-services-en-science-des-données-et-ia">Prestations de services en science des données et IA</a></h2>
+<p>Dans le cadre de sa mission de prestataire de services d’intérêt public et en étroite collaboration avec ses partenaires universitaires et institutionnels, le DSCC établit des normes de qualité et des directives pour le respect de la protection des données et développe des infrastructures de base (sandboxes) pour les applications utilisées en science des données et IA dans le secteur public.</p>
+<p>Le DSCC offre, outre ces prestations de base, les prestations de service suivantes:</p>
+<ol>
+<li>Conseils</li>
+</ol>
+<blockquote>
+<p>Conseils prodigués à l’administration fédérale sur l’application stratégique, tactique et opérationnelle de méthodes et de processus innovants en matière de science des données (analyse du potentiel que présentent les procédures tirées de la statistique avancée, de l’apprentissage automatique, du domaine de l’IA, etc.).</p>
+</blockquote>
+<ol start="2">
+<li>Accompagnement méthodologique</li>
+</ol>
+<blockquote>
+<p>Accompagnement méthodologique (coaching – training on the job) pour la mise en œuvre de projets réalisés en interne ou confiés à des externes. Intégration des résultats dans les processus administratifs existants dans le but de les optimiser, notamment en offrant une nouvelle perspective.</p>
+</blockquote>
+<ol start="3">
+<li>Réalisation de projets</li>
+</ol>
+<blockquote>
+<p>Exécution complète de projets pertinents en science des données, de la formulation du problème (compréhension du cas, business understanding) à l’obtention d’un produit minimum viable (minimum viable product, MVP). Si l’ampleur du projet l’exige, le DSCC fait appel à ses partenaires institutionnels et universitaires.</p>
+</blockquote>
+<ol start="4">
+<li>Formations</li>
+</ol>
+<blockquote>
+<p>Formations (training, training off the job) axées sur l’application des méthodes, techniques et pratiques de la science des données ainsi que sur l’utilisation des technologies et outils informatiques requis.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="communaute"><a href="#communaute" class="header">Communaute</a></h1>
+<h2 id="communauté-science-des-données-et-ia-pour-le-bien-commun"><a class="header" href="#communauté-science-des-données-et-ia-pour-le-bien-commun">Communauté: Science des données et IA pour le bien commun</a></h2>
+<p>Le Centre de compétences en science des données (DSCC) recourt à la science des données et développe des compétences dans l’intérêt public partout en Suisse. Le lien de confiance avec le public est primordial: les services en science des données du DSCC sont proposés en toute transparence. Leurs résultats et les enseignements qui en découlent sont librement accessibles (pour autant que la législation, en particulier celle sur la protection des données, le permette) dans le but de générer une plus-value durable pour l’ensemble de l’administration.</p>
+<p><img src="img/commu.png" alt="">
+Légende: unique communauté de pratique (Community of Practice – CoP) en matière de science des données au sein de l’administration fédérale</p>
+<h2 id="communauté-de-pratique-data-science-and-artificial-intelligence-cop-dsai"><a class="header" href="#communauté-de-pratique-data-science-and-artificial-intelligence-cop-dsai">Communauté de pratique Data Science and Artificial Intelligence (CoP DS&amp;AI)</a></h2>
+<p>Dans le cadre de la mise en œuvre de la Stratégie de la Confédération en matière de science des données, le Centre de compétences en sciences des données (DSCC) a fondé la Community of Practice for Data Science and Artificial Intelligence (CoP DS&amp;AI).</p>
+<p>La mise en place d’une communauté d’utilisateurs de la science des données au sein de l’administration publique sert l’intérêt général puisqu’elle assure l’échange permanent des savoir-faire et des connaissances techniques. Pour ce faire, la CoP DS&amp;AI cherche à faciliter tous types de conversations «bottom-up» touchant à toute problématique en lien avec la science des données.</p>
+<p>Sujets traités par la CoP DS&amp;AI (liste non exhaustive):</p>
+<ul>
+<li>Bonnes pratiques (explicabilité, reproductibilité, etc.)</li>
+<li>Nouvelles méthodes en science des données et partage des connaissances</li>
+<li>Mutualisation des ressources et des outils de science des données</li>
+<li>IA générative et grands modèles de langage (Large Language Models, LLM)</li>
+<li>Défis et bases légales</li>
+</ul>
+<p>Partie intégrante du Réseau de compétences en intelligence artificielle, le DSCC encourage les échanges entre divers groupes d’intérêt.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="méthodes-statistiques"><a class="header" href="#méthodes-statistiques">Méthodes statistiques</a></h1>
+<p>Des fichiers et des instructions sont mis à la disposition du public. Ces derniers visent à permettre l’application ciblée de méthodes statistiques aux différents types de données. methodes-statistiques</p>
+<h2 id="méthodes-de-correction-des-effets-calendrier-en-usage-à-lofs-en-2023"><a class="header" href="#méthodes-de-correction-des-effets-calendrier-en-usage-à-lofs-en-2023">Méthodes de correction des effets calendrier en usage à l’OFS en 2023</a></h2>
+<p>Des fichiers et programmes permettant de corriger les effets calendrier de séries temporelles sont mis à disposition par l’Office fédéral de la statistique. Un rapport de méthodes décrit en détail aussi bien les aspects théoriques que l’application pratique de ces fichiers/programmes et leur utilisation.</p>
+<p><img src="img/meth.png" alt=""></p>
+<h2 id="construction-choix-et-application-des-régresseurs-mis-à-disposition"><a class="header" href="#construction-choix-et-application-des-régresseurs-mis-à-disposition">Construction, choix et application des régresseurs mis à disposition</a></h2>
+<p>L’OFS a publié un rapport de méthodes sur la correction des effets calendrier des séries temporelles. Dans ce cadre, des fichiers sont mis à disposition du public sous la forme d’une archive au format .zip.</p>
+<p>L’objectif est de permettre aux utilisateurs d’effectuer de façon autonome des corrections d’effets calendrier sur leurs propres séries temporelles. L’archive .zip ci-dessous contient ainsi en les fichiers suivants :</p>
+<ul>
+<li>Des documents texte au format .dat, contenant des “régresseurs” calculés selon plusieurs options de modélisation. Ces fichiers peuvent servir de fichiers d’entrée (input) pour des programmes tels que X13-ARIMA-SEATS (en anglais).</li>
+<li>Des programmes écrits en langage R qui permettent de construire automatiquement les fichiers .dat décrits précédemment,</li>
+<li>Un fichier readme.txt (en anglais).</li>
+</ul>
+<p>Un exemple d’utilisation des fichiers d’input au format .dat pour corriger les effets calendrier d’une série temporelle est donné dans le rapport de méthodes en section 5 et en annexe A.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="blog"><a class="header" href="#blog">Blog</a></h1>
+<p>Bienvenue sur le blog du Centre de compétences en science des données DSCC!</p>
+<p>Nous abordons l’ensemble des sujets intéressant la communauté: la Science des Données et l’IA pour le Bien Commun.</p>
+<ul>
+<li>2025-11 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2025-02-gkg.html">Cinquième réunion de la CoP DS&amp;AI</a></li>
+<li>2025-10 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2025-03-dsai.html">L’Office fédéral de la statistique, pionnier de la science des données et de l’IA centrées sur l’humain</a></li>
+<li>2024-12 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2024-06-gkg.html">Quatrième rencontre de la CoP DS&amp;AI</a></li>
+<li>2024-10 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2024-05-dp.html">Questions et réponses: confidentialité différentielle </a></li>
+<li>2024-09 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2024-04-cop-dsai.html">Troisième réunion de la CoP DS&amp;AI</a></li>
+<li>2024-07 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2024-03-lomas.html">Lomas: une plateforme pour l’analyse confidentielle de données</a></li>
+<li>2024-06 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2024-02-opendp.html">Collaboration avec OpenDP: l’OFS innove pour protéger la vie privée de la population</a></li>
+<li>2024-03 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2024-01-cop-dsai.html">Deuxième réunion de la CoP DS&amp;AI</a></li>
+<li>2023-11 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2023-04-cop-dsai.html">Première réunion de la CoP DS&amp;AI</a></li>
+<li>2023-09 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2023-03-ofrou.html">Amélioration de la qualité de la statistique du trafic </a></li>
+<li>2023-05 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2023-02-statbot.html">StatBot.Swiss: discuter avec les données ouvertes</a></li>
+<li>2023-02 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2023-01-visualisation.html">L’importance de la visualisation des données</a></li>
+<li>2022-11 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2022-05-donnees-mobilite.html">Utilisation des données sur la mobilité en cas d’urgence de santé publique </a></li>
+<li>2022-10 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2022-04-hack-zh.html">HackZurich: mieux comprendre le changement climatique</a></li>
+<li>2022-07 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2022-03-realisation-projets.html">Réalisation de projets en science des données</a></li>
+<li>2022-07 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2022-02-ecosysteme.html">Écosystème public suisse de la science des données</a></li>
+<li>2022-03 <a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/blog/2022-01-bien-commun.html">Science des données pour le bien commun</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="événements"><a class="header" href="#événements">Événements</a></h1>
+<p>Des événements divers sont organisés par le Centre de compétences en science des données (DSCC) afin de mutualiser les connaissances dans les domaines de la science des données et de l’intelligence artificielle (IA). Ces événements permettent d’assurer un échange d’idées et de bonnes pratiques, conformément aux valeurs de l’Etat de droit.</p>
+<p>Les événements organisés par le DSCC sont destinés au personnel des administrations publiques ainsi qu’à leurs partenaires académiques et institutionnels dans le cadre du développement de la communauté de pratique (CoP) : Science des données et IA pour le bien commun. evenements</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="série-de-webinaires-science-des-données-et-ia-pour-le-bien-commun"><a class="header" href="#série-de-webinaires-science-des-données-et-ia-pour-le-bien-commun">Série de webinaires: Science des données et IA pour le bien commun</a></h1>
+<p>La série de webinaires: Science des données et IA pour le bien commun se concentre sur des thèmes liés à la science des données et à l’intelligence artificielle (IA). seminaires</p>
+<p>Le Centre de compétences en science des données (DSCC) organise une série de webinaires: Science des données et IA pour le bien commun s’adressant au personnel des administrations publiques suisses et à leurs partenaires académiques.</p>
+<p>Des intervenants suisses et internationaux présentent leurs recherches innovantes en lien avec la science des données et l’intelligence artificielle (IA), conformes aux principes de l’État de droit:</p>
+<ul>
+<li>gouvernance des données;</li>
+<li>protection des données;</li>
+<li>analyse éthique des données;</li>
+<li>explicabilité des algorithmes;</li>
+<li>approche neutre et objective;</li>
+<li>reproductibilité;</li>
+<li>respect des principes de non-discrimination;</li>
+<li>sécurité de l’information;</li>
+<li>transparence.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="groupes-dintérêts"><a class="header" href="#groupes-dintérêts">Groupes d’intérêts</a></h1>
+<p>Les groupes d’intérêt permettent aux spécialistes d’échanger des informations sur les domaines de la science des données et de l’intelligence artificielle (IA). groupes-interets</p>
+<p>Afin de permettre aux spécialistes de partager des connaissances en science des données et en intelligence artificielle (IA), les groupes d’intérêts visent à partager des idées et du savoir ainsi qu’à donner lieu à des collaborations originales et à des projets innovants. Le Centre de compétences en science des données (DSCC) organise des communautés de pratique reposant sur des domaines d’intérêt partagés en science des données et en intelligence artificielle.</p>
+<p>Les domaines d’intérêt peuvent concerner, entre autres, les approches méthodologiques suivantes :</p>
+<ul>
+<li>analyse de causes et effets (inférence causale);</li>
+<li>élaboration de politiques fondées sur des données probantes;</li>
+<li>apprentissage automatique;</li>
+<li>vision par ordinateur et science des géodonnées;</li>
+<li>science des données préservant la vie privée;</li>
+<li>élaboration de plans d’échantillonnage, analyse et modélisation statistiques;</li>
+<li>conception algorithmique;</li>
+<li>infrastructures.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="portfolio"><a class="header" href="#portfolio">Portfolio</a></h1>
+<p>Le Centre de compétences en science des données (DSCC) réalise des projets pour toute l’administration publique suisse. Plusieurs collaborations sont en cours avec des offices fédéraux et des offices de statistique cantonaux. Nous fournissons volontiers des références dans le cadre d’une demande de collaboration. portfolio</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="statbotswiss"><a class="header" href="#statbotswiss">StatBot.Swiss</a></h1>
+<p>Le projet StatBot.Swiss vise à développer un chatbot capable d’interagir avec les données ouvertes de l’administration publique suisse (Open Government Data, OGD) sous forme de questions-réponses. statbot</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Nom du projet</th><th>StatBot.Swiss</th></tr>
+</thead>
+<tbody>
+<tr><td>Prestations</td><td>Mise en œuvre du projet</td></tr>
+<tr><td>Langue(s)</td><td>Anglais</td></tr>
+<tr><td>Utilisateur(s)</td><td>Office fédéral de la statistique (OFS)</td></tr>
+<tr><td>Champ(s) thématique(s)</td><td>Reconnaissance textuelle</td></tr>
+<tr><td><strong>Problématique</strong></td><td>chatbot répondant à des questions sur les données statistiques suisses.</td></tr>
+<tr><td><strong>Solution</strong></td><td>collaboration avec la ZHAW, qui propose déjà plusieurs solutions.</td></tr>
+<tr><td><strong>Justification</strong></td><td>la standardisation et l’harmonisation des données permet de constituer une base de données commune.</td></tr>
+<tr><td><strong>Utilité</strong></td><td>permettre à un robot ML de répondre aux questions qui lui sont posées en s’appuyant sur cette base de données.</td></tr>
+<tr><td><strong>Résultat</strong></td><td>faciliter la recherche de données structurées à travers plusieurs niveaux verticaux, via différents acteurs horizontaux.</td></tr>
+<tr><td><strong>Instances impliquées</strong></td><td>DSCC, ZHAW, OFIT, CORSTAT (office de la statistique du canton de Bâle-Ville, office de la statistique de la ville de Zurich, office de la statistique du canton de Zurich).</td></tr>
+<tr><td><strong>Groupe cible</strong></td><td>citoyens ayant des questions</td></tr>
+<tr><td>Date de début / date de fin</td><td>2021 / 2023 OFS / DSCC: 1.12.22 – 31.12.23</td></tr>
+<tr><td>État du projet (degré de maturité)</td><td>Entre la phase de conception et le développement du prototype</td></tr>
+<tr><td>Direction du projet</td><td>OFS / DSCC et CORSTAT</td></tr>
+<tr><td>Personne(s) de contact</td><td>Christine Choirat, Patrick Arnecke</td></tr>
+<tr><td>Type de données</td><td>Données structurées</td></tr>
+<tr><td>Composantes de l’apprentissage automatique</td><td>Apprentissage supervisé</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="publications"><a class="header" href="#publications">Publications</a></h2>
+<ul>
+<li><a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/portfolio/statbot.assetdetail.33446380.html">Final report</a></li>
+<li><a href="https://www.bfs.admin.ch/bfs/fr/home/dscc/portfolio/statbot.assetdetail.33250708.html">Intermediate report</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="amélioration-de-la-qualité-de-la-statistique-du-trafic"><a class="header" href="#amélioration-de-la-qualité-de-la-statistique-du-trafic">Amélioration de la qualité de la statistique du trafic</a></h1>
+<p>Le projet vise à automatiser la détection des erreurs de mesure des capteurs sur les routes nationales et la reconstruction des données manquantes. Une boîte à outils sera développée pour aider les collaborateurs de l’Office fédéral des routes (OFROU) à prendre des décisions basées sur des données. astra</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Nom du projet</th><th>Amélioration de la qualité de la statistique du trafic</th></tr>
+</thead>
+<tbody>
+<tr><td>Prestations</td><td>Mise en œuvre du projet</td></tr>
+<tr><td>Langue(s)</td><td>Anglais</td></tr>
+<tr><td>Utilisateur(s)</td><td>Office fédéral des routes (OFROU)</td></tr>
+<tr><td>Champ(s) thématique(s)</td><td>Contrôle de plausibilité, recherche et imputation des données manquantes</td></tr>
+<tr><td>Date de début / date de fin</td><td>2021, en continu</td></tr>
+<tr><td>Direction du projet</td><td>Office fédéral des routes (OFROU)</td></tr>
+<tr><td>Type de données</td><td>Données structurées des capteurs</td></tr>
+<tr><td>Composantes de l’apprentissage automatique</td><td>Apprentissage supervisé: modèles additifs généralisés</td></tr>
+</tbody>
+</table>
+</div>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="léquipe-du-dscc"><a class="header" href="#léquipe-du-dscc">L’équipe du DSCC</a></h1>
+<p>Nous considérons la science des données comme un sport d’équipe.</p>
+<p>Le Centre de compétences en science des données (DSCC) est constitué d’une équipe internationale de scientifiques, bénéficiant d’une formation académique de haut niveau dans des domaines tels que la science des données, l’ingénierie des données, l’informatique, le développement de logiciels, l’analyse commerciale, les mathématiques, les statistiques et les processus de décision.</p>
+<p>Les membres de notre équipe disposent notamment de connaissances pointues dans les domaines suivants:</p>
+<h2 id="compétences-méthodologiques"><a class="header" href="#compétences-méthodologiques">Compétences méthodologiques</a></h2>
+<ul>
+<li>Analyse causale (recherche des causes).</li>
+<li>Politique fondée sur des faits probants.</li>
+<li>Apprentissage automatique et reconnaissance d’images.</li>
+<li>Développement d’un produit minimum viable (MVP).</li>
+<li>Science des données et protection de la sphère privée.</li>
+<li>Élaboration de plans d’échantillonnage, analyse et modélisation statistiques.</li>
+<li>Algorithmes adaptés à des besoins particuliers</li>
+</ul>
+<h2 id="compétences-techniques"><a class="header" href="#compétences-techniques">Compétences techniques</a></h2>
+<ul>
+<li>Développement d’outils pour la collecte et le traitement des données.</li>
+<li>Développement d’outils pour la visualisation et la publication des données.</li>
+<li>Programmation R et Python.</li>
+</ul>
+<p>Nous bénéficions d’une vaste expérience dans la prestation de services au secteur public, notamment aux offices fédéraux et cantonaux.</p>
+<p>Nous participons en outre aux projets de recherche des Nations Unies, de la Commission Economique des Nations Unies pour l’Europe (CEE-ONU) et d’Eurostat.</p>
+<p>Les services du DSCC sont disponibles en français, en allemand, en italien et en anglais.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
